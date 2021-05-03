@@ -10,6 +10,7 @@ $data = json_encode($data);
 </head>
 <body>
 <button data-tosend = <?=$data?> id="send">ok</button>
+<p id="result"></p>
 <script src="script.js"></script>
 </body>
 </html>

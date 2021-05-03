@@ -1,4 +1,5 @@
 const button = document.getElementById('send');
+const result = document.getElementById('result');
 let data = button.dataset.tosend;
 
 
@@ -17,9 +18,8 @@ console.log(data);
 button.addEventListener('click',()=>{
     fetch('action.php',options)
         .then(response => response.json())
-        .then(response => {
-            let object = JSON.parse(response);
-            alert('Bonjour ' + object.prenom +object.nom);
+        .then(response => { console.log(response);
+           result.innerHTML = 'Bonjour ' + response.prenom + ' '+ response.nom;
         }
 
 );
